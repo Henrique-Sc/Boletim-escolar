@@ -26,9 +26,9 @@ while True:
     while True:
         esc = input(f'\nDeseja continuar? [{IB}S{r}im / {IR}N{r}ão]: ').strip().upper()[0]
         # Tratamento de erros
-        if esc not in 'SN':
-            print(f'{IR}Valor incorreto!{r} Digite novamente.')
-            esc = input(f'\nDeseja continuar? [{IB}S{r}im / {IR}N{r}ão]: ').strip().upper()[0]
+        while esc not in 'SN':
+            print(f'\n{IR}Valor incorreto!{r} Digite novamente.')
+            esc = input(f'Deseja continuar? [{IB}S{r}im / {IR}N{r}ão]: ').strip().upper()[0]
         break
 
     sleep(0.3)
