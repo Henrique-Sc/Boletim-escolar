@@ -36,8 +36,6 @@ while True:
     if esc == 'N':
         break
 
-print(alunos)
-
 print('\n', '-=' * 20)
 sleep(0.3)
 print('')
