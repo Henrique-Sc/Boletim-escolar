@@ -66,16 +66,21 @@ print('Obs: digite o número do aluno(a) (0 para parar).')
 while True:
     ver_nota = int(input('\nDeseja mostrar as notas de qual aluno(a)? ').strip())
     sleep(0.5)
+    
+    print('')
+    
     while ver_nota < 0 or ver_nota > len(alunos):
-        ver_nota = int(input(f'\n{IR}Valor inválido! Digite o número correto de um dos alunos: {r}').strip())
+        ver_nota = int(input(f'{IR}Valor inválido! Digite o número correto de um dos alunos: {r}').strip())
         sleep(0.5)
-
+    
     if ver_nota == 0:
+        
         break
 
-    print(f'\nNotas do(a) {alunos[ver_nota - 1][0]}: {alunos[ver_nota - 1][1]}')
+    print(f'Notas do(a) {alunos[ver_nota - 1][0]}: {alunos[ver_nota - 1][1]}')
 
 for c in range(5):
     sleep(0.3)
     print('.')
+
 print('\nPrograma finalizado.')
