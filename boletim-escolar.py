@@ -15,8 +15,12 @@ print('-=--=--= Boletim escolar =--=--=-')
 
 # While para inserção dos dados
 while True:
+    print('\n----------------------------------')
+    
     nome = (str(input('\nPrimeiro nome do aluno: ').strip().title()))
     notas = [float(input('Nota 1: ').strip()), float(input('Nota 2: ').strip())]
+    
+    print('\n----------------------------------')
     media = mean(notas)
 
     alunos.append([nome, notas[:], media])
@@ -35,21 +39,22 @@ while True:
 
     if esc == 'N':
         break
-
+    
+# Linha para design
 print('\n', '-=' * 20)
 sleep(0.3)
 print('')
 
+# Exibição do boletim
 print('\t', '-' * 31)
 sleep(0.3)
 print(f'\t | {negrito}Nº  | Nome         | Média  {r}|')
 sleep(0.3)
 
-n = 1
-for aluno in alunos:
-    print(f'\t | {n:<3} | {aluno[0]:<12} | {f"{aluno[2]:.1f}":<6} |')
+
+for n, aluno in enumerate(alunos):
+    print(f'\t | {n + 1:<3} | {aluno[0]:<12} | {f"{aluno[2]:.1f}":<6} |')
     sleep(0.3)
-    n += 1
 
 print('\t', '-' * 31)
 sleep(0.3)
