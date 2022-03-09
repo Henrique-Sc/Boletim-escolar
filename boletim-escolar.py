@@ -83,4 +83,4 @@ for c in range(5):
     sleep(0.3)
     print('.')
 
-print('\nPrograma finalizado.')
+print('\n<- Programa finalizado. ->')
