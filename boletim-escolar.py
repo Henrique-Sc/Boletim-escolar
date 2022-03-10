@@ -41,27 +41,22 @@ while True:
         break
     
 # Linha para design
-print('\n', '-=' * 20)
-sleep(0.3)
+print('\n', '-=' * 20), sleep(0.3)
 print('')
 
 # Exibição do boletim
-print('\t', '-' * 31)
-sleep(0.3)
-print(f'\t | {negrito}Nº  | Nome         | Média  {r}|')
-sleep(0.3)
+print('\t', '-' * 31), sleep(0.3)
 
+print(f'\t | {negrito}Nº  | Nome         | Média  {r}|'), sleep(0.3)
 
 for n, aluno in enumerate(alunos):
-    print(f'\t | {n + 1:<3} | {aluno[0]:<12} | {f"{aluno[2]:.1f}":<6} |')
-    sleep(0.3)
-
-print('\t', '-' * 31)
-sleep(0.3)
-print('\n', '-=' * 20)
-sleep(0.3)
+    print(f'\t | {n + 1:<3} | {aluno[0]:<12} | {f"{aluno[2]:.1f}":<6} |'), sleep(0.3)
+    
+print('\t', '-' * 31), sleep(0.3)
+print('\n', '-=' * 20), sleep(0.3)
 print('')
 
+# Análise detalhada sobre cada aluno
 print('Obs: digite o número do aluno(a) (0 para parar).')
 while True:
     ver_nota = int(input('\nDeseja mostrar as notas de qual aluno(a)? ').strip())
@@ -69,16 +64,17 @@ while True:
     
     print('')
     
+    # Tratamento de erros
     while ver_nota < 0 or ver_nota > len(alunos):
         ver_nota = int(input(f'{IR}Valor inválido! Digite o número correto de um dos alunos: {r}').strip())
         sleep(0.5)
     
     if ver_nota == 0:
-        
         break
 
     print(f'Notas do(a) {alunos[ver_nota - 1][0]}: {alunos[ver_nota - 1][1]}')
 
+# Fim do programa :)
 for c in range(5):
     sleep(0.3)
     print('.')
